@@ -27,3 +27,18 @@ dist/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+
+# rough files
+rough_work.ipynb
+models/
+config.yaml
+snn_mnist.py
+snn_trainer.py
+cache_dataset/
+data/
+test.ipynb
+train_and_test_snn.py
+train_fast.py
+train_faster.py
+train_model_inf.py
