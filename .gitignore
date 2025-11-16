@@ -35,7 +35,7 @@ models/
 config.yaml
 snn_mnist.py
 snn_trainer.py
-cache_dataset/
+cached_dataset/
 data/
 test.ipynb
 train_and_test_snn.py
