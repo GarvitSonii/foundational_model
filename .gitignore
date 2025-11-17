@@ -43,8 +43,20 @@ train_fast.py
 train_faster.py
 train_model_inf.py
 
-Unet/
 
 models_1.pt
 models_2.pt
 models_3.pt
+
+Unet/__pycache__/
+Unet/models/
+Unet/cached_npy_dataset/
+Unet/cached_npz_dataset/
+Unet/h5_cached_dataset/
+
+Unet/cache_npz.py
+Unet.pre_pros.py
+Unet/one_more_pre_pros.py
+Unet/train.ipynb
+Unet/train_model.ipynb
+Unet/veiw_data.ipynb
