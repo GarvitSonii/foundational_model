@@ -44,3 +44,7 @@ train_faster.py
 train_model_inf.py
 
 Unet/
+
+models_1.pt
+models_2.pt
+models_3.pt
