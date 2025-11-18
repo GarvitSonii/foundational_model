@@ -41,7 +41,6 @@ test.ipynb
 train_and_test_snn.py
 train_fast.py
 train_faster.py
-train_model_inf.py
 
 
 models_1.pt
@@ -55,8 +54,9 @@ Unet/cached_npz_dataset/
 Unet/h5_cached_dataset/
 
 Unet/cache_npz.py
-Unet.pre_pros.py
+Unet/pre_pros.py
 Unet/one_more_pre_pros.py
 Unet/train.ipynb
 Unet/train_model.ipynb
 Unet/veiw_data.ipynb
+Unet/rough.ipynb
