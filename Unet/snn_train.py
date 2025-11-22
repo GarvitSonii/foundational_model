@@ -132,12 +132,28 @@ if __name__ == '__main__':
 
     sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=20)
 
+    # ==== RESUME FROM CHECKPOINT ====
+    start_epoch = 1
+    ckpt_path = Path("models/model_snn_5.pt")
+
+    if ckpt_path.exists():
+        ckpt = torch.load(ckpt_path, map_location=device)
+        model.load_state_dict(ckpt["model_state"])
+        opt.load_state_dict(ckpt["optimizer_state"])
+        prev_epoch = ckpt.get("epoch", 0)
+        start_epoch = prev_epoch + 1
+        print(f"Resuming from epoch {prev_epoch}, starting at epoch {start_epoch}")
+
+        # Optional: advance LR scheduler so LR is consistent
+        for _ in range(prev_epoch):
+            sched.step()
+    # ================================
     from tqdm.auto import tqdm
 
     epochs = 300
     print('begin training (SNN)')
 
-    for epoch in range(1, epochs+1):
+    for epoch in range(start_epoch, epochs+1):
         model.train()
         train_loss = 0.0
         n_batches = 0
