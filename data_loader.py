@@ -6,14 +6,14 @@ from PIL import Image
 import pickle
 
 print('saving data path to root')
-root = Path(r"C:\Users\garvi\.cache\kagglehub\datasets\sorour\95cloud-cloud-segmentation-on-satellite-images\versions\3\95-cloud_training_only_additional_to38-cloud")
+root = Path(r"C:\Users\garvi\.cache\kagglehub\datasets\sorour\38cloud-cloud-segmentation-in-satellite-images\versions\4\38-Cloud_training")
 
 print('extracting channels')
-RED   = root / "train_red_additional_to38cloud"
-GREEN = root / "train_green_additional_to38cloud"
-BLUE  = root / "train_blue_additional_to38cloud"
-NIR   = root / "train_nir_additional_to38cloud"
-GT    = root / "train_gt_additional_to38cloud"
+RED   = root / "train_red"
+GREEN = root / "train_green"
+BLUE  = root / "train_blue"
+NIR   = root / "train_nir"
+GT    = root / "train_gt"
 
 IMG_EXT = (".tif",".tiff",".png",".jpg",".jpeg")
 MSK_EXT = (".tif",".tiff",".png")
